@@ -1,0 +1,296 @@
+set.seed(123)
+L <- list(4,4,8,2)
+L2 <- list(6,6,10,4)
+D <- data.frame()
+D
+D <- rbind( D, L)
+D
+D <- rbind( D, L2)
+D
+nrows(D)
+nRows(D)
+Nrows(D)
+nrow(D)
+help(rownames)
+help(setas)
+help(setAs)
+list("a", L)
+list("a", "b", L)
+help(list)
+N <- list("a", "b")
+N + L
+c( N, L )
+N
+L
+c( "a", L )
+help(function)
+help(function())
+help("function")
+help(setAs)
+An example spiphy analysis#
+#
+# Get set up...#
+data(sample_tree)#
+set.seed(123)#
+#
+# Manually load libraries that are required by other libraries that #
+# otherwise can't see their namespace#
+library(ape)#
+library(MASS)#
+#
+# Generate the phylogenetic covariance matrix, A#
+A <- buildCovarianceMatrix()#
+#
+# Generate the within species covariance matrix, P#
+P <- diag(1, 20)#
+#
+# Create a PhyloData object and simulate 3 individuals per species#
+pd <- new(Class = "PhyloData", phy=sample_tree, A=A, P=P )#
+pd <- simulateIndividuals( pd, 3 )
+quit()
+source("http://bioconductor.org/biocLite.R")#
+    biocLite("goseq")
+library(goseq)
+citation("goseq")
+d <- c(76.475, 94.575, 68.475, 65.375, 77.3, 71.575, 76.775, 75.725, 94, 70.625, 73.2916666666667, 74.275, 68.675, 73.475, 76.1, 74.75, 66.85, 75.95, 68, 75.125, 48.925, 67.4, 75.125, 75.375, 90.9416666666667, 72.4166666666667, 74.5, 71.2, 72.875, 67.15, 94, 20.7, 72.725, 77.15, 71.3916666666666, 77.75, 73.75)
+hist(d)
+help par
+help( par )
+import(ape)
+library(ape)
+help(ape)
+library(help = ape)
+??add node
+quit()
+layout.show(6)
+help(layout)
+layout(matrix(c(4,1)), heigths=c(0.5))
+layout(matrix(c(4,1)))
+layout(matrix(c(1,2,3,4)))
+layout.show(4)
+layout(rbind(c(1),c(2),c(3),c(4)))
+layout.show(4)
+layout(cbind(c(1),c(2),c(3),c(4)))
+layout.show(4)
+layout(cbind(c(1),c(2),c(3),c(4)),heights=c(0.5,0.5,0.5,0.5))
+layout.show(4)
+layout(cbind(c(1),c(2),c(3),c(4)),heights=c(0.5,0.5,0.5,0.5), respect=TRUE)
+layout.show(4)
+layout(cbind(c(1),c(2),c(3),c(4)), respect=TRUE)
+layout.show(4)
+help(image)
+layout(rbind(c(1,2,3,4),c(0,0,0,0),c(5,5,5,5)))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5)))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(2,1,1))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(1,1,1))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(1,0.5,1))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(1,0.2,1))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(1,0.25,1))
+layout.show(5)
+layout(rbind(c(1,2,3,4),c(5,5,5,5),c(0,0,0,0)), heights=c(1,0.25,2))
+layout.show(5)
+help(pdf)
+quit()
+help(dim)
+gray(0:100 / 100)
+library(ggplot2)
+help(ggplot2)
+set.seed(1410) # Make the sample reproducible
+dsmall <- diamonds[sample(nrow(diamonds), 100), ]
+qplot(carat, price, data = diamonds)
+qplot(carat, price, data = dsmall, geom = c("point", "smooth"))
+qplot(color, price / carat, data = diamonds, geom = "jitter", alpha = I(1 / 5))
+help(c)
+library (ape)
+help(ape)
+library(ape)
+help(ape)
+examples(ape)
+example(ape)
+library(help = ape)
+help(pic)
+library(ape)
+help(pic)
+pic
+help(cbind)
+example(pic)
+help(pic)
+tree.primates <- read.tree(text="((((Homo:0.21,Pongo:0.21):0.28,",#
+   "Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);")
+tree.primates
+help(read.tree)
+tree.primates <- read.tree(text="((((Homo:0.21,Pongo:0.21):0.28,Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);")
+tree.primates
+plot(tree.primates)
+X <- c(4.09434, 3.61092, 2.37024, 2.02815, -1.46968)#
+Y <- c(4.74493, 3.33220, 3.36730, 2.89037, 2.30259)#
+names(X) <- names(Y) <- c("Homo", "Pongo", "Macaca", "Ateles", "Galago")#
+pic.X <- pic(X, tree.primates)#
+pic.Y <- pic(Y, tree.primates)#
+cor.test(pic.X, pic.Y)#
+lm(pic.Y ~ pic.X - 1) # both regressions#
+lm(pic.X ~ pic.Y - 1) # through the origin
+help(pic)
+plot(tree.primates, label.offset = 0.04)#
+tiplabels(round(X, 2))
+4.09434-3.61092
+pic.X.ns <- pic(X, tree.primates, scaled = FALSE, var.contrasts = FALSE)
+pic.X.ns
+pic.X.ns <- pic(X, tree.primates, scaled = FALSE, var.contrasts = TRUE)#
+# pic.Y.ns <- pic(Y, tree.primates, scaled = FALSE, var.contrasts = FALSE)#
+#
+plot(tree.primates, label.offset = 0.04)#
+tiplabels(round(X, 2))#
+plot(tree.primates)#
+nodelabels( round(pic.X.ns[,1], 2), adj = c(0, -0.5), frame = "n" )
+plot(tree.primates)#
+nodelabels( round(pic.X.ns[,1], 2) )
+plot(tree.primates, label.offset = 0.04)#
+tiplabels(round(X, 2))#
+nodelabels( round(aX, 2) )
+aX <- ace(X, tree.primates, method = "pic")$ace
+nodelabels( round(aX, 2) )
+plot(tree.primates, label.offset = 0.04)#
+nodelabels( round(pic.X.ns[,1], 2) )
+3.61-4.09
+3.85-2.37
+3.2-2.03
+2.78+1.47
+((0.28*3.85) + (2.37*0.49))/(0.49+0.28)
+((0.21*4.09)+(3.61*0.21))/0.42
+library(ape)
+help(ace)
+t <- read.tree(text="((((Homo:0.21,Pongo:0.21):0.28,#
+Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);")
+t
+t <- read.tree(text="((((Homo:0.21,Pongo:0.21):0.28,\#
+Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);")
+t
+t <- "((((Homo:0.21,Pongo:0.21):0.28,Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);"
+t
+library(geiger)
+help(geiger)
+example(geospiza)
+example(geiger)
+help(dtt.full)
+library(ape)
+rtree(8)
+plot(rtree(8))
+help(rtree)
+layout(matrix(1:9, 3, 3))
+for (i in 1:9) plot(rtree(20))
+plot(rtree(8))
+library(ape)
+plot(rtree(8))
+rtreeshape( 1,8 )
+rbdtree( 0.1, 0 )
+plot (rbdtree( 0.1, 0 ))
+plot (rbdtree( 0.1, 0, tmax=50 ))
+plot (rbdtree( 0.1, 0, Tmax=50 ))
+plot (rbdtree( 0.1, 0, Tmax=25 ))
+plot (rlineage( 0.1, 0, Tmax=25 ))
+plot (rlineage( 0.1, 0.1, Tmax=25 ))
+plot (rlineage( 0.2, 0.1, Tmax=25 ))
+library(apTreeshape)
+rtreeshape( 1, 8 )
+rtreeshape( 1, 8, model="yule" )
+rtreeshape( 1, 8, model="yule" )[[1]]
+t <- as.phy(rtreeshape( 1, 8, model="yule" )[[1]])
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+plot(t)
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+plot(t)
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+plot(t)
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+plot(t)
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+plot(t)
+t <- rtreeshape( 1, 8, model="yule" )[[1]]
+t
+help(rtree)
+plot(rcoal(8))
+help(sim.char)
+library(geiger)
+help(sim.char)
+vcv <- c( 1, 0.3, 0.3, 1 )#
+dim( vcv ) <- c( 2, 2 )#
+vcv
+library(phylo4d)
+library(phylobase)
+help(phylo4d)
+diag(2)
+vcv <- diag( 3 )#
+vcv[1,2] <- 0.3#
+vcv[2,1] <- 0.3#
+vcv
+help(pic)
+help(cov)
+help(pic)
+help(mvrnorm)
+help(phylosignal)
+library(picante)
+help(phylosignal)
+4+2
+library(ape)
+help(source)
+setwd("~/Dropbox/repo/PhylogeneticBiology/analyses/independent_contrasts")
+D <- read.table("Geospiza.txt", header=TRUE)
+D
+x <- 5
+x
+str(x)
+str(D)
+data
+D
+names(D)
+D$wingL
+D[,1]
+D[1,1]
+??titanic
+data(Titanic)
+help(Titanic)
+D
+D[1,]
+1
+1:3
+D[1:3,]
+order[D$wingL]
+order(D$wingL)
+D[order(D$wingL), ]
+1:100
+y <- 1:100
+y
+dim(y) <- c(10, 10)
+y
+c(1, 3, 5)
+library(ape)
+t <- rcoal(30)
+plot(t)
+help(rcoal)
+plot(rtree(30))
+plot(t)
+plot(t)
+t <- rcoal(30)
+plot(t)
+t <- rcoal(30)
+plot(t)
+vcv <- diag(3)vcv[1, 2] <- 0.7vcv[2, 1] <- 0.7vcv
+diag(6)
+vcv
+library(geiger)D <- sim.char(t, vcv, nsims = 100, model = "brownian", root.state = 0)
+D[,,1]
+D[,,2]
+library(adephylo)D4 <- phylo4d(t, D[, , 1])table.phylo4d(D4, box = FALSE)
+ic1 <- pic(D[, 1, 1], t)ic2 <- pic(D[, 2, 1], t)ic3 <- pic(D[, 3, 1], t)
+ic1
+cov(cbind(ic1, ic2, ic3))
+vcv
